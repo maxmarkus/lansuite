@@ -438,7 +438,7 @@ ga('send', 'pageview');
                     $smarty->assign('MainRightBox', $templ['index']['control']['boxes_rightside']);
                     $smarty->assign('MainHeaderBox', $templ['index']['control']['boxes_header']); // markus boxklassen
                     $smarty->assign('MainTopBox', $templ['index']['control']['boxes_top']); // markus boxklassen
-                    $smarty->assign('MainLogo', '<img src="design/'.$this->design.'/images/lansuite-logo.gif" alt="Lansuite Logo" title="Lansuite Logo" border="0" />');
+                    $smarty->assign('MainLogo', '<img src="design/'.$this->design.'/images/lansuite-logo.png" alt="Lansuite Logo" title="Lansuite Logo" border="0" />');
                     if ($auth['type'] >= 2 and isset($debug)) { // and $cfg['sys_showdebug'] (no more, for option now in inc/base/config)
                         $smarty->assign('MainDebug', $debug->show());
                     }

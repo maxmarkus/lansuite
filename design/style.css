@@ -21,11 +21,11 @@ name {
 body {
   margin: 10px 10px 10px 10px;    padding: 0px 0px 0px 0px;
   text-align: left;
-  background: #ffffff;    color: #000000;
-  font-size: 11px;    font-weight: normal;   font-family: verdana, helvetica, sans-serif;
+  background: #666;    color: #000000;
+  font-size: 12px;    font-weight: normal;   font-family: verdana, helvetica, sans-serif;
 }
 td {
-  font-size: 11px;
+  font-size: 12px;
 }
 a:link, a:visited {
     color: #000000;
@@ -47,7 +47,7 @@ label {
 input {
   margin: 0px 0px 0px 0px;   border: 1px solid #284279;   padding: 1px 0px 1px 0px;
   background: #D7E5F2;   color: #102132;
-  font-size: 11px;    font-weight: normal;   font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;    font-weight: normal;   font-family: verdana, helvetica, sans-serif;
 }
 input.checkbox {
   margin: 0px 4px 0px 0px;   border: 0px 0px 0px 0px;   padding: 0px 0px 0px 0px;
@@ -65,7 +65,7 @@ input[type=text] {
 select {
   margin: 0px 0px 0px 0px;   border: 1px solid #284279;   padding: 0px 0px 0px 0px;
   background: #D7E5F2;   color: #102132;
-  font-size: 11px;
+  font-size: 12px;
 }
 textarea {
   width: 99%;
@@ -232,7 +232,7 @@ div.Buttons a {
   margin: 2px 2px 2px 0px;   border: 2px solid #6882b9;   padding: 1px;
   float: left;
   background: #D7E5F2;   color: #102132;
-  font-size: 11px;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-family: verdana, helvetica, sans-serif;
   text-align: center;
 }
 div.Buttons a:hover {
@@ -240,7 +240,7 @@ div.Buttons a:hover {
   margin: 2px 2px 2px 0px;   border: 2px solid #6882b9;   padding: 1px;
   float: left;
   background: #284279;   color: #ffffff;
-  font-size: 11px;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-family: verdana, helvetica, sans-serif;
   text-align: center;
   text-decoration: none;
 }
@@ -248,13 +248,13 @@ input.Button {
   width: 125px;  height: 100%;
   margin: 2px 0px 2px 0px;   border: 2px solid #6882b9;   padding: 0px 2px 0px 2px;
   background: #D7E5F2;   color: #102132;
-  font-size: 11px;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-family: verdana, helvetica, sans-serif;
 }
 input.Button:hover {
   width: 125px;  height: 100%;
   margin: 2px 0px 2px 0px;   border: 2px solid #6882b9;   padding: 0px 2px 0px 2px;
   background: #284279;   color: #ffffff;
-  font-size: 11px;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-family: verdana, helvetica, sans-serif;
   text-decoration: none;
 }
 
@@ -412,7 +412,7 @@ div.wikiH1 {
 #teamspeakdisplay td {
   padding: 0px;
   vertical-align: top;  white-space: nowrap;
-  font-size: 11px;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-family: verdana, helvetica, sans-serif;
 }
 #teamspeakdisplay td.teamspeakserver {
   padding-left: 3px;
@@ -429,12 +429,12 @@ div.wikiH1 {
     font-weight: bold;
 }
 #teamspeakdisplay a.teamspeakserver {
-  font-size: 11px;  font-weight: bold;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-weight: bold;  font-family: verdana, helvetica, sans-serif;
   text-decoration: none;
   color: #000000;
 }
 #teamspeakdisplay a.teamspeakchannel, a.teamspeaksubchannel {
-  font-size: 11px;  font-weight: ;  font-family: verdana, helvetica, sans-serif;
+  font-size: 12px;  font-weight: ;  font-family: verdana, helvetica, sans-serif;
   text-decoration: none;
   color: #000000;
 }
@@ -450,7 +450,7 @@ div.wikiH1 {
 
 #shoutbox {
     font-family: Arial,Helvetica,sans-serif;
-    font-size: 11px;
+    font-size: 12px;
 }
 .shoutbox-list {
     border-bottom: 1px solid #8DA2B4;
@@ -586,7 +586,7 @@ h1 {
   margin-bottom: 0px;
 }
 div.HeadlineSub {
-  font-size: 12px;
+  font-size: 13px;
   border-bottom: 1px solid #9c9d9c;   margin: 0px 0px 12px 0px;
 }
 div.HeadlineHelp {
@@ -641,24 +641,24 @@ div#Footer {
   border-bottom: 1px solid #9c9d9c;   padding: 4px 2px 0px 2px;
     background: #E8E7E7;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   text-align: left;
 }
 .row_value, .mastersearch2_search_row_value, .mastersearch2_result_row_value {
   height: 100%;
   border-bottom: 1px solid #9c9d9c;   padding: 4px 2px 0px 2px;
     background: #EFEFEF;
-  font-size: 11px;
+  font-size: 12px;
 }
 .row_value_highlighted, .mastersearch2_search_row_value_highlighted, .mastersearch2_result_row_value_highlighted {
   height: 100%;
   border-bottom: 1px solid #9c9d9c;   padding: 4px 2px 0px 2px;
     background:     #E2F2E2;
-  font-size: 11px;
+  font-size: 12px;
 }
 .row_value_important, .mastersearch2_search_row_value_important, .mastersearch2_result_row_value_important {
   height: 100%;
   border-bottom: 1px solid #9c9d9c;   padding: 4px 2px 0px 2px;
     background: #EEE6BD;
-  font-size: 11px;
+  font-size: 12px;
 }
