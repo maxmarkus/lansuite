@@ -2,6 +2,13 @@
 // Composer autoloading
 require __DIR__ . '/vendor/autoload.php';
 
+function pdie($data, $die = true) {
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+    if($die) die;
+}
+
 use Symfony\Component\Debug\Debug;
 
 // Set error_reporting.
@@ -127,9 +134,12 @@ $PHPErrors = '';
 
 // Read Config and Definitionfiles
 // Load Basic Config
-if (file_exists('inc/base/config.php')) {
-    $config = parse_ini_file('inc/base/config.php', 1);
-
+if ($_SERVER['HTTP_HOST'] === 'localhost:8080') {
+    if (file_exists('inc/base/config_docker.php')) {
+        $config = parse_ini_file('inc/base/config_docker.php', 1);
+    } 
+} else if (file_exists('inc/base/config_docker.php')) {
+            $config = parse_ini_file('inc/base/config_docker.php', 1);
 // Default config. Will be used only until the wizard has created the config file
 } else {
     $config = [];
@@ -172,6 +182,9 @@ $framework = new \LanSuite\Framework();
 if (isset($_GET['fullscreen'])) {
     $framework->fullscreen($_GET['fullscreen']);
 }
+
+// markus custom notlösung
+$AddJQueryTabsStart = false; // AddJQueryTabsStart() einmalig manuell aufrufen    
 
 // Compromise ... design as base and popup should be deprecated
 if (isset($_GET['design']) && ($_GET['design'] == 'base' || $_GET['design'] == 'popup' || $_GET['design'] == 'ajax' || $_GET['design'] == 'print' || $_GET['design'] == 'beamer')) {

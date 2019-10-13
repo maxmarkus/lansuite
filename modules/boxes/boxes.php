@@ -70,6 +70,12 @@ while ($BoxRow = $db->fetch_array($BoxRes)) {
             } elseif ($BoxRow['place'] == 1) {
                 $templ['index']['control']['boxes_rightside'] .= $menu->get_menu_items();
             }
+            elseif ($BoxRow['place'] == 2) {  // markus boxclasses
+                $templ['index']['control']['boxes_header'] .= $menu->get_menu_items();
+            }
+            elseif ($BoxRow['place'] == 3) {  // markus boxclasses
+                $templ['index']['control']['boxes_top'] .= $menu->get_menu_items();
+            }
             if ($menu->box->box_rows) {
                 $MenuActive = 1;
             }
@@ -87,6 +93,10 @@ while ($BoxRow = $db->fetch_array($BoxRes)) {
                     $templ['index']['control']['boxes_letfside'] .= $box->CreateBox($BoxRow['boxid'], t($BoxRow['name']), t($BoxRow['name']), $BoxRow['module']);
                 } elseif ($BoxRow['place'] == 1) {
                     $templ['index']['control']['boxes_rightside'] .= $box->CreateBox($BoxRow['boxid'], t($BoxRow['name']), t($BoxRow['name']), $BoxRow['module']);
+                } elseif ($BoxRow['place'] == 2) {
+                    $templ['index']['control']['boxes_header'] .= $box->CreateBox($BoxRow['boxid'], t($BoxRow['name']), t($BoxRow['name']), $BoxRow['module']);
+                } elseif ($BoxRow['place'] == 3) {
+                    $templ['index']['control']['boxes_top'] .= $box->CreateBox($BoxRow['boxid'], t($BoxRow['name']), t($BoxRow['name']), $BoxRow['module']);
                 }
             }
         }

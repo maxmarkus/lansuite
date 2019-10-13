@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {$main_header_metatags}
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="expires" content="900" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="design/{$Design}/favicon.ico">
+
+    <title>{$templ['index']['info']['lanparty_name']}</title>
+    {$main_header_sitereload}
+
+    <!-- Bootstrap core CSS -->
+    <link href="design/{$Design}/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="design/{$Design}/css/offcanvas.css" rel="stylesheet">
+
+    <link href="design/{$Design}/css/headshot-custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    {$main_header_csscode} 
+    {$main_header_jsfiles}
+
+    {$main_header_jscode}
+</head>
+
+<body>
+    
+    {if $MainContentStyleID != 'ContentFullscreen'}
+    <img class="bg" src="design/{$Design}/images/bg_img_1.jpg" />
+    
+    <div class="top_stage hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4"><img src="design/{$Design}/images/logo-headshot-lanparty.png" border="0" style="margin-top: -20px;"/></div>
+            <div class="col-xs-12 col-md-5 col-md-offset-3">
+                {$MainTopBox}
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="teaser_stage">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-sm-6 col-md-6 text-center">
+                <h1 class="hsfont">{$smarty.session.party_info.name|truncate:2:""}. Lanparty</h1>
+                <h3 class="hsfont">{$smarty.session.party_info.partybegin|date_format:"%d.%m."}-{$smarty.session.party_info.partyend|date_format:"%d.%m.%y"}</h3>
+            </div>
+            
+            <img src="design/{$Design}/images/logo-headshot-lanparty.png" border="0" class="visible-xs col-xs-3" style="padding:35px 0 0 10px;" />
+            
+            <div class="col-xs-9 col-sm-6 col-md-5 MainHeaderBox" style="text-align: right;">
+                <!-- LAN STATUS -->
+                {$MainHeaderBox}
+            </div>
+        </div><!--/row-->
+    </div>
+    </div>
+{else}
+<div class="container">
+    <div id="LansuiteFullscreen">{$CloseFullscreen}</div>
+</div>
+{/if}
+
+
+    <div class="container padding_top_40">
+        <div class="col-xs-12 col-sm-3 col-md-3" id="sidebar" role="navigation">
+        <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button> 
+        {$MainLeftBox}
+        
+        {$MainRightBox}
+        </div><!-- end leftbox -->
+        
+        <!-- main container -->
+            {if $MainContentStyleID != 'ContentFullscreen'}  
+            <div class="col-xs-12 col-sm-9 col-md-8 col-md-offset-1 bgwhite" style="padding: 15px">
+            {else}
+            <div class="col-xs-12">
+            {/if}
+                
+            {$MainContent}
+            </div>
+        
+            
+            {if $MainContentStyleID != 'ContentFullscreen'}  
+            <div class="col-xs-12 col-sm-9 col-md-8 col-md-offset-1 bgwhite_footer" style="padding: 15px; margin-top: 30px; text-align:center;">
+            {else}
+            <div class="col-xs-12" style="padding: 15px; margin-top: 30px; text-align:center;">
+            {/if}
+                <!-- Sponsoren direkt in bstrap_headshot/templates/main.html -->
+                <a href="http://www.futureweb.at" rel="noopener" target="_blank"><img border="0" src="ext_inc/banner/banner-futureweb.jpg" class="sponsor" title="Futureweb - Webhosting Webdesign Programmierung"></a><br />
+                <small>Unser Webserver wird vom professionellen Anbieter rund um<br />
+                Internetauftritte - Futureweb St. Johann - zur Verfügung gestellt.</small>
+                <br /><br />
+                <a href="http://www.sjon.at" rel="noopener" target="_blank"><img border="0" src="ext_inc/banner/sjon-banner.jpg" class="sponsor" title="St. Johann Online - SJON - Glasfaser Internet"></a><br />
+                <small>Ultraschnelles Breitband-Internet mit Glasfaser in St. Johann in Tirol und Oberndorf</small>
+     
+            </div>
+          <!--       
+        <div class="col-xs-12 col-md-8 col-md-offset-1 home-news">
+            NEWS CONTENT
+            <div class="row bgwhite">
+                <div class="col-xs-8"><h3>Alles neu macht der Dezember ...</h3></div>
+                <div class="col-xs-4 text-right"><h3><small>11.11.2013</small></h3></div>
+                
+                <div class="col-xs-12">Lorem ipsum dolor</div>
+                
+                <div class="col-xs-12 comments">0 Kommentare</div>
+            </div>
+            <div class="row"><div class="col-xs-12">&nbsp;</div></div>
+           
+            <div class="row bgwhite">
+                <div class="col-xs-8"><h3>Alles neu macht der Dezember ...</h3></div>
+                <div class="col-xs-4 text-right"><h3><small>11.11.2013</small></h3></div>
+                
+                <div class="col-xs-12">Lorem ipsum dolor</div>
+                
+                <div class="col-xs-12 comments">0 Kommentare</div>
+            </div>
+
+        </div>
+ -->
+
+       
+    </div><!-- /main.container -->    
+        
+{if $MainContentStyleID != 'ContentFullscreen'} 
+    <div class="container">
+ 
+      <footer>
+        <p>&copy; hEAdShoT Lanparties e.V. 2001 - {$smarty.now|date_format:"%Y"}
+         | <a href="index.php?{$main_footer_cleanquery}&amp;fullscreen={if $MainContentStyleID == 'ContentFullscreen'}no{else}yes{/if}" class="menu" rel="nofollow">Fullscreen</a> {if $main_footer_impressum}| 
+<a href="index.php?mod=info2&action=show_info2&id={$main_footer_impressum}" class="menu" rel="nofollow">Impressum</a>{/if}</p>
+      </footer>
+
+    </div><!--/.container-->
+{/if}
+
+{$MainFrameworkmessages}
+
+
+<!-- {if !$IsMobileBrowser}<div id="BoxesRight">{$MainRightBox}</div>{/if} -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="design/{$Design}/js/bootstrap.min.js"></script>
+    <script src="design/{$Design}/js/offcanvas.js"></script>
+    <script src="design/{$Design}/js/lanparty.js"></script>
+  </body>
+</html>

@@ -22,9 +22,11 @@ switch ($_GET['step']) {
         $selections = array();
         $selections['0'] = t('Links');
         $selections['1'] = t('Rechts');
+        $selections['2'] = t('Header'); // markus boxklassen
+        $selections['3'] = t('Top (Login)'); // markus boxklassen
         $mf->AddField(t('Seite'), 'place', \LanSuite\MasterForm::IS_SELECTION, $selections, \LanSuite\MasterForm::FIELD_OPTIONAL);
         $mf->AddField(t('Position'), 'pos');
-        $mf->AddField(t('Aktiv'), 'active', '', '', \LanSuite\MasterForm::FIELD_OPTIONAL);
+        $mf->AddField(t('Aktiv'), 'active', '', '', \LanSuite\MasterForm::FIELD_OPTIONAL); // markus? this was disabled
         $selections = array();
         $selections['0'] = t('Egal');
         $selections['1'] = t('Nur in Intranet Version');

@@ -141,6 +141,7 @@ class Display
 
         $this->TabsMainContentTmp = $MainContent;
         $MainContent = '';
+        $MainContent = '<div class="tab-content">'; // markus custom
     }
 
     /**
@@ -180,10 +181,16 @@ class Display
         $out = $this->TabsMainContentTmp;
 
         $items = '';
+        // foreach ($this->TabNames as $key => $name) {
+        //     $items .= '<li><a href="#tabs-'. $key .'">'. $name .'</a></li>';
+        // }
+        // $out .= '<div id="tabs"><ul>'. $items .'</ul>';
         foreach ($this->TabNames as $key => $name) {
-            $items .= '<li><a href="#tabs-'. $key .'">'. $name .'</a></li>';
+            $is_active = ($key==0) ? ' class="active"' : ''; // markus custom
+            $items .= '<li'.$is_active.'><a href="#tabs-'. $key .'" data-toggle="tab">'. $name .'</a></li>'; // markus custom
         }
-        $out .= '<div id="tabs"><ul>'. $items .'</ul>';
+        $out .= '<div id="tabs_orig"><ul class="nav nav-tabs">'. $items .'</ul>'; // markus custom
+
 
         $sel = '';
         if ($_GET['tab']) {
@@ -192,6 +199,7 @@ class Display
         $framework->add_js_code('$(function() { $("#tabs").tabs('. $sel .'); });');
 
         $out .= $MainContent .'</div>';
+        $out .= '</div>'; // markus custom
         $MainContent = $out;
     }
 

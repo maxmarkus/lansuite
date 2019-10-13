@@ -12,6 +12,10 @@ function PlaceName($place)
         return t('Linke Seite');
     } elseif ($place == 1) {
         return t('Rechte Seite');
+    } elseif ($place == 2) { // markus boxklassen
+        return t('Header');
+    } elseif ($place == 3) { // markus boxklassen
+        return t('Top (Login)');
     }
 
     return '';

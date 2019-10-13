@@ -107,6 +107,7 @@ class DB
         global $config;
 
         $server = $config['database']['server'];
+        $port = $config['database']['port'];
         $user = $config['database']['user'];
         $pass = $config['database']['passwd'];
         $database = $config['database']['database'];
@@ -114,7 +115,7 @@ class DB
 
         // Try to connect to the database
         // Suppress error output, because mysqli_connect throws a PHP Warning once it is not able to connect
-        $this->link_id = @mysqli_connect($server, $user, $pass);
+        $this->link_id = @mysqli_connect($server, $user, $pass, null, $port);
 
         if (!$this->link_id) {
             if ($save) {

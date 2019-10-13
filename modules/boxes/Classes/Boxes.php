@@ -243,11 +243,13 @@ class Boxes
         $smarty->assign('module', $module);
         $smarty->assign('link_open_close', "index.php?box_action=change&amp;boxid=$boxid");
 
+        $box_tpl = ($box_tpl) ? $box_tpl : 'box_case'; // markus, custom
+
         // Open or closed Box
         if (!$_SESSION['box_'. $boxid .'_active']) {
             $file = 'design/'. $auth['design'] .'/templates/box_case.htm';
         } else {
-            $file = 'design/'. $auth['design'] .'/templates/box_case_closed.htm';
+            $file = 'design/'. $auth['design'] .'/templates/' . $box_tpl . 'closed.htm'; // markus custom
         }
         if ($title) {
             $out = $smarty->fetch($file, 'box'.$title.$auth['type']);

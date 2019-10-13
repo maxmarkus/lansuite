@@ -453,7 +453,7 @@ class Auth
             // Link session ID to new user ID
             $db->qry('UPDATE %prefix%stats_auth SET userid=%int%, login=\'1\' WHERE sessid=%string%', $target_id, $this->auth["sessid"]);
 
-            $func->confirmation(t('Benutzerwechsel erfolgreich. Die &Auml;nderungen werden beim laden der nächsten Seite wirksam.'), '', 1);  //FIX meldungen auserhalb/standart?!?
+            $func->confirmation(t('Benutzerwechsel erfolgreich. Die &Auml;nderungen werden beim Laden der nächsten Seite wirksam.'), '', 1);  //FIX meldungen auserhalb/standart?!?
         } else {
             $func->error(t('Dein Benutzerlevel ist geringer, als das des Ziel-Benutzers. Ein Wechsel ist daher untersagt'), '', 1); //FIX meldungen auserhalb/standart?!
         }
@@ -485,7 +485,7 @@ class Auth
                 $this->cookie_data['sb_code'] = '';
                 $this->cookie_set();
 
-                $func->confirmation(t('Benutzerwechsel erfolgreich. Die Änderungen werden beim laden der nächsten Seite wirksam.'), '', 1);
+                $func->confirmation(t('Benutzerwechsel erfolgreich. Die Änderungen werden beim Laden der nächsten Seite wirksam.'), '', 1);
             } else {
                 $func->information(t('Fehler: Falscher switch back code! Das kann daran liegen, dass dein Browser keine Cookies unterstützt.'), '', 1);
             }

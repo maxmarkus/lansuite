@@ -84,10 +84,10 @@ if ($cfg['sys_internet']) {
         }
         $box->ItemRow('data', '<form action=""><select name="set_party_id" class="form" >'. $options .'</select><br /><input type="submit" class="Button" value="Party wechseln" /></form>');
     } else {
-        $box->ItemRow("data", '<b>'. $_SESSION['party_info']['name'] .'</b>');
+        // $box->ItemRow("data", '<b>'. $_SESSION['party_info']['name'] .'</b>'); // markus custom
     }
     $db->free_result($res);
-  
+
     date_default_timezone_set($cfg['sys_timezone']);
     $box->EngangedRow(date("d.m.y", $_SESSION['party_info']['partybegin']) .' - '. date("d.m.y", $_SESSION['party_info']['partyend']));
 }

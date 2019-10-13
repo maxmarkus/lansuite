@@ -182,10 +182,10 @@ if (!$user_data['userid']) {
         if (IsAuthorizedAdmin()) {
             $seat .= ' '. $dsp->FetchIcon('edit', 'index.php?mod=seating&action=seatadmin&step=2&userid=' . $_GET['userid'], t('Editieren'));
         }
-        if ($cfg['sys_internet'] == 0 and $user_data_seating['ip']) {
-            $seat .= ' IP:'. $user_data_seating['ip'];
-        }
-          $dsp->AddDoubleRow(t('Sitzplatz'), $seat);
+        // if ($cfg['sys_internet'] == 0 and $user_data_seating['ip']) { // markus custom
+        //     $seat .= ' IP:'. $user_data_seating['ip'];
+        // }
+        $dsp->AddDoubleRow(t('Sitzplatz'), $seat);
     }
 
     // Kontostand
@@ -197,9 +197,9 @@ if (!$user_data['userid']) {
             $amount = $result['total'];
         }
 
-          $kontostand = round($amount, 2) . " " . $cfg['sys_currency'];
-          $kontostand .= ', '. t('Zahlung vornehmen') .': '.$dsp->FetchIcon('paid', 'index.php?mod=foodcenter&action=account&act=payment&step=2&userid=' . $_GET['userid']);
-          $dsp->AddDoubleRow(t('Aktueller Kontobetrag:'), $kontostand);
+        $kontostand = round($amount, 2) . " " . $cfg['sys_currency'];
+        $kontostand .= ', '. t('Zahlung vornehmen') .': '.$dsp->FetchIcon('paid', 'index.php?mod=foodcenter&action=account&act=payment&step=2&userid=' . $_GET['userid']);
+        $dsp->AddDoubleRow(t('Aktueller Kontobetrag:'), $kontostand);
     }
 
     $dsp->AddFieldsetStart(t('Kontakt'));

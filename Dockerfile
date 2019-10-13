@@ -18,8 +18,11 @@ RUN apt-get update \
     && docker-php-ext-enable xdebug \
     && echo 'xdebug.remote_enable=1' >> /usr/local/etc/php/php.ini \
     && echo 'xdebug.remote_connect_back=1' >> /usr/local/etc/php/php.ini \
+    && apt-get install -y \
+        nmap \
+        iputils-ping
     # Cleanup
-    && rm -rf /var/lib/apt/lists/* \
+RUN rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
 # Composer setup starts here. The zip extension is required for that.
